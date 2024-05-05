@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+:root{
+    --clr-Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --clr-Dark-grayish-blue: hsl(227, 10%, 46%);
+    --clr-Dark-gray: hsl(0, 0%, 59%);
+}
+
+body{
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    background: url('./images/bg-pattern-top.svg')  no-repeat, 
+                url('./images/bg-pattern-bottom.svg')  no-repeat,
+                var(--clr-Dark-cyan);
+    background-position: left -60% top 180%, right -50% bottom 240%;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: clamp(15em, 350px, 90%);
+    text-align: center;
+    background: url('./images/bg-pattern-card.svg') no-repeat, white;
+    border-radius: 1rem;
+}
+
+.card > *{
+    padding: 0.3rem;
+}
+
+.pic{
+    margin-block: 5.5rem 1rem;
+}
+
+.pic img{
+    border-radius: 50%;
+}
+
+.bold{
+    font-weight: 700;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.age, .location, .category{
+    color: var(--clr-Dark-grayish-blue);
+    font-weight: 400;
+}
+
+.line{
+    height: 0.5px;
+    background-color: var(--clr-Dark-gray);
+    opacity: 0.5;
+    padding: 0;
+    margin-block: 0.5rem;
+}
+
+.data{
+    display: flex;
+    justify-content: space-evenly;
+    margin-block: 1rem;
+}
+
+.number{
+    display: flex;
+    flex-direction: column;
+}
+
+.age{
+    padding-left: 0.8rem;
+}
+
+.location{
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.category{
+    font-size: 0.75rem;
+    padding-top: 0.4rem;
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
